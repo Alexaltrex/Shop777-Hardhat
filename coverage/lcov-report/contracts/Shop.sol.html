@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts\Shop.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> Shop.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>35/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>34/40</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>12/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>39/39</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.9;
+&nbsp;
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "./Token.sol";
+//import "hardhat/console.sol";
+&nbsp;
+contract Shop is Ownable, IERC777Recipient {
+    IERC1820Registry internal constant _ERC1820_REGISTRY = IERC1820Registry(0x1820a4B7618BdE71Dce8cdc73aAB6C95905faD24);
+    uint public constant FEE = 5;
+&nbsp;
+    //========= STATE =========//
+    Token public token;
+    uint _tokenPriceForSell = 90; // цена продажи магазину (wei / 1 unit of internal denomination)
+    uint _tokenPriceForBuy = 100; // цена покупки у магазина (wei / 1 unit of internal denomination)
+&nbsp;
+    //========= EVENTS =========//
+    event SellPriceChange(uint oldValue, uint newValue, uint timestamp);
+    event BuyPriceChange(uint oldValue, uint newValue, uint timestamp);
+    event Buy(address indexed buyer, uint amount, uint price, uint timestamp); // покупка токена
+    event Sell(address indexed seller, uint amount, uint price, uint timestamp); // продажа токена
+    event Mint(uint amount, uint timestamp);
+    event Burn(uint amount, uint timestamp);
+&nbsp;
+    //========= CONSTRUCTOR =========//
+    constructor(uint initialSupply) {
+        address[] memory defaultOperators = new address[](1);
+        defaultOperators[0] = address(this);
+        token = new Token(initialSupply, defaultOperators);
+&nbsp;
+        // register to ERC1820 registry
+        _ERC1820_REGISTRY.setInterfaceImplementer(
+            address(this),
+            _ERC1820_REGISTRY.interfaceHash("ERC777TokensRecipient"),
+            address(this)
+        );
+    }
+&nbsp;
+    //========= TOKENS RECEIVED =========//
+    function tokensReceived(
+        address operator,
+        address from,
+        address to,
+        uint amount,
+        bytes calldata data,
+        bytes calldata operatorData
+    ) external override {
+        //console.log("tokensReceived");
+    }
+&nbsp;
+    //========= GET TOKEN PRICE FOR SELL =========//
+    function getTokenPriceForSell() public view returns (uint) {
+        return _tokenPriceForSell;
+    }
+&nbsp;
+    //========= SET TOKEN PRICE FOR SELL =========//
+    function setTokenPriceForSell(uint tokenPriceForSell_) external onlyOwner {
+        require(tokenPriceForSell_ != 0, "Shop: price could not be equal 0");
+        emit SellPriceChange(_tokenPriceForSell, tokenPriceForSell_, block.timestamp);
+        _tokenPriceForSell = tokenPriceForSell_;
+    }
+&nbsp;
+    //========= GET TOKEN PRICE FOR BUY =========//
+    function getTokenPriceForBuy() public view returns (uint) {
+        return _tokenPriceForBuy;
+    }
+&nbsp;
+    //========= SET TOKEN PRICE FOR BUY =========//
+    function setTokenPriceForBuy(uint tokenPriceForBuy_) external onlyOwner {
+        require(tokenPriceForBuy_ != 0, "Shop: price could not be equal 0");
+        emit BuyPriceChange(_tokenPriceForBuy, tokenPriceForBuy_, block.timestamp);
+        _tokenPriceForBuy = tokenPriceForBuy_;
+    }
+&nbsp;
+    //========= BUY TOKENS FROM SHOP =========//
+    function buyTokensFromShop() external payable {
+        require(msg.value &gt;= _tokenPriceForBuy, "Shop: not enough ethers for buy");
+&nbsp;
+        uint amountToBuy = msg.value / _tokenPriceForBuy;
+        // uint shopBalance = token.balanceOf(address(this));
+        // shopBalance &gt;= amountToBuy
+        // shopBalance &gt;= msg.value / _tokenPriceForBuy
+        // shopBalance * _tokenPriceForBuy &gt;= msg.value
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(token.balanceOf(address(this)) * _tokenPriceForBuy &gt;= msg.value, "Shop: shop doesn't have the required quantity of tokens");
+&nbsp;
+        // send tokens to buyer
+        token.send(msg.sender, amountToBuy, "");
+&nbsp;
+        // if rest &gt; 0, transfer {rest} ethers back to buyer
+        uint rest = msg.value - (amountToBuy * _tokenPriceForBuy);
+        if (rest &gt; 0) {
+            (bool success,) = msg.sender.call{value : rest}("");
+            <span class="missing-if-branch" title="else path not taken" >E</span>require(success, "NFTShop: transfer rest ether to buyer failed");
+        }
+&nbsp;
+        emit Buy(msg.sender, amountToBuy, _tokenPriceForBuy, block.timestamp);
+    }
+&nbsp;
+    //========= SELL TOKENS TO SHOP =========//
+    function sellTokensToShop(uint amount) external {
+        // нельзя продать 0 токенов
+        require(amount &gt; 0, "Shop: amount of tokens could not to be equal 0");
+&nbsp;
+        // продавец имеет заявленное количество токенов
+        require(token.balanceOf(msg.sender) &gt;= amount, "Shop: seller does not own that count of tokens");
+&nbsp;
+        // магазин имеет достаточное количество эфира для покупки токенов у продавца
+        require(address(this).balance &gt;= amount * _tokenPriceForSell, "Shop: shop does not have enough ether");
+&nbsp;
+        // магазин является оператором для продавца (может переводит его токены)
+        //require(token.isOperatorFor(address(this), msg.sender), "Shop: shop is not operator for seller");
+&nbsp;
+        // магазин переводит токены от продавца в магазин
+        token.operatorSend(msg.sender, address(this), amount, "", "");
+&nbsp;
+        // возмещаем продавцу деньги
+        (bool success,) = msg.sender.call{value : amount * _tokenPriceForSell}("");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(success, "NFTShop: transfer ether to seller failed");
+&nbsp;
+        emit Sell(msg.sender, amount, _tokenPriceForSell, block.timestamp);
+    }
+&nbsp;
+    //========= GET SHOP BALANCE =========//
+    function getShopBalance() public view <span class="missing-if-branch" title="else path not taken" >E</span>onlyOwner returns (uint) {
+        return address(this).balance;
+    }
+&nbsp;
+    //========= MINT TO SHOP =========//
+    function mintToShop(uint amount) external onlyOwner {
+        require(amount &gt; 0, "Shop: amount of minted tokens could not to be equal 0");
+        token.mint(amount);
+        emit Mint(amount, block.timestamp);
+    }
+&nbsp;
+    //========= BURN FROM SHOP =========//
+    function burnFromShop(uint amount) external onlyOwner {
+        require(amount &gt; 0, "Shop: amount of burned tokens could not to be equal 0");
+        require(amount &lt;= token.balanceOf(address(this)), "Shop: shop does not own that count of tokens");
+        token.burn(amount, "");
+        emit Burn(amount, block.timestamp);
+    }
+&nbsp;
+    //========= WITHDRAW ALL =========//
+    function withdrawAll() public <span class="missing-if-branch" title="else path not taken" >E</span>onlyOwner {
+        address owner = owner();
+        (bool success,) = owner.call{value : address(this).balance}("");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(success, "NFTShop: withdraw failed");
+    }
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue May 02 2023 03:07:33 GMT+0300 (Москва, стандартное время)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
